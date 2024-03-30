@@ -1,14 +1,15 @@
 ---
 # title: Docs with VitePress
 # editLink: true
-lastUpdated: true
+# lastUpdated: true
 ---
 
+<!--
 <script setup>
         import { useData } from 'vitepress'
         const { theme, page, frontmatter, lang } = useData()
         console.log(page)
-</script>
+</script> -->
 
 # docker 命令
 
