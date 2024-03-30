@@ -4,6 +4,7 @@ import barConfig from "./nav";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  ignoreDeadLinks: true,
   titleTemplate: ":title|个人笔记",
   title: "title in config",
   description: "description in config",
