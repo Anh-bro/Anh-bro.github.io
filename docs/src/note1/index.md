@@ -1,12 +1,13 @@
 ---
+# lastUpdated: 1711802340000
 ---
 
-<script setup>
-    
+<!-- <script setup>
+
     import { useData } from 'vitepress'
     const { theme, page, frontmatter, lang } = useData()
     console.log(page)
-</script>
+</script> -->
 
 # 指令速查
 
