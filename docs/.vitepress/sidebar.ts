@@ -6,7 +6,7 @@ var sidebarConfig: DefaultTheme.Sidebar | undefined = {
       items: [
         {
           text: "容器Docker",
-          link: "/note1Dir/docker-note",
+          link: "/note1/docker-note",
         },
       ],
     },

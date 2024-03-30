@@ -10,6 +10,32 @@ export default defineConfig({
   description: "description in config",
   srcDir: "./src",
   lastUpdated: true,
+  head: [
+    [
+      "script",
+      {},
+      `
+        function initSakanaWidget() {
+          new SakanaWidget().mount('#sakana-widget');
+        }
+      `,
+    ],
+    [
+      "script",
+      {
+        async: "",
+        onload: "initSakanaWidget()",
+        src: "https://cdn.jsdelivr.net/npm/sakana-widget@2.7.0/lib/sakana.min.js",
+      },
+    ],
+    [
+      "link",
+      {
+        rel: "stylesheet",
+        href: "https://cdn.jsdelivr.net/npm/sakana-widget@2.7.0/lib/sakana.min.css",
+      },
+    ],
+  ],
   markdown: {
     lineNumbers: true,
     image: {
