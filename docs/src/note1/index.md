@@ -1,5 +1,4 @@
 ---
-lastUpdated: 20240000000000
 ---
 
 <script setup>
