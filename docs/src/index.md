@@ -8,7 +8,7 @@ hero:
   text: "记录乱七八糟的知识"
   tagline: 两年程序员，一生极客情
   image:
-    src: bg.png
+    src: /bg.png
     alt: VitePress logo
   actions:
     - theme: brand
