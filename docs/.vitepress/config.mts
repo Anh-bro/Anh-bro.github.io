@@ -51,6 +51,13 @@ export default defineConfig({
     },
   },
   themeConfig: {
+    lastUpdated: {
+      text: "最后更新",
+      formatOptions: {
+        dateStyle: "full",
+        timeStyle: "medium",
+      },
+    },
     logo: {
       src: "/logo.svg",
       alt: "logo is missing...",
