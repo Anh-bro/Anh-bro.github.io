@@ -4,6 +4,12 @@
 lastUpdated: true
 ---
 
+<script setup>
+        import { useData } from 'vitepress'
+        const { theme, page, frontmatter, lang } = useData()
+        console.log(page)
+</script>
+
 # docker 命令
 
 ## 镜像

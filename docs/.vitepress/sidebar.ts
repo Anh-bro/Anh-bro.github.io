@@ -12,6 +12,10 @@ var sidebarConfig: DefaultTheme.Sidebar | undefined = {
           text: "容器Docker",
           link: "/note1/docker-note",
         },
+        {
+          text: "版本管理Git",
+          link: "/note1/git",
+        },
       ],
     },
     {
