@@ -38,23 +38,17 @@ var sidebarConfig: DefaultTheme.Sidebar | undefined = {
       ],
     },
   ],
-  //package2目录下的侧边栏
-  // "/package2": [
-  //   {
-  //     text: "Examples",
-  //     items: [
-  //       { text: "Markdown Examples", link: "/markdown-examples" },
-  //       { text: "Runtime API Examples", link: "/api-examples" },
-  //       { text: "Docker命令", link: "/package2/docker-note" },
-  //     ],
-  //   },
-  //   {
-  //     text: "test",
-  //     items: [
-  //       { text: "Markdown Examples", link: "/markdown-examples" },
-  //       { text: "Runtime API Examples", link: "/api-examples" },
-  //     ],
-  //   },
-  // ],
+  "/note3": [
+    {
+      base: "/note3/",
+      text: "乱七八糟",
+      items: [
+        {
+          text: "前端",
+          link: "front-end",
+        },
+      ],
+    },
+  ],
 };
 export default sidebarConfig;
