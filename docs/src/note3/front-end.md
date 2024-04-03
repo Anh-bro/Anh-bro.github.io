@@ -66,6 +66,36 @@ hyper reference 通常表示跳转地址
 重置样式表
 [meyer.css](https://meyerweb.com/eric/tools/css/reset/)
 
+### flex
+
+**父元素**设置`display:flex`后，所有子元素都会变成弹性项目
+弹性项目会沿着主轴方向延申，竖轴方向拉伸
+
+通过`flex-direction`可改变主轴方向
+
+通过`justify-content`属性可改变主轴上的排列方式
+
+通过`align-items`属性可改变侧轴上的排列方式
+
+**弹性项目**上使用`flex`属性，可以设置拉伸和压缩比例：flex：拉伸比例 压缩比例 初始尺寸
+
+拉伸比例和压缩比例就是将剩余空间或不足的空间按比例分给弹性项目
+
+默认情况下：`flex:0 1 auto`
+
+### 网格布局
+
+父元素设置为`display:grid`后，所有子元素都会变成网格项目
+
+```css
+.container {
+   display:grid
+   /* 设置列或行的宽或高 */
+   grid-template-columns: 100px 100px 100px;
+   grid-template-rows: 100px 100px 100px;
+}
+```
+
 ### 盒模型
 
 box：盒子，每个元素会在页面中占用一个矩形区域
@@ -244,4 +274,68 @@ opacity：设置整个元素的透明度，取值为 0-1，0 表示完全透明�
 display:none
 visibility:hidden
 
-## javascript
+<!-- ## javascript -->
+
+### http 请求
+
+1. 每次请求-响应都是独立的，互相之间互不干扰，其为无状态协议
+2. 每次请求-响应传递的消息都是纯文本（字符串），文本格式必须按照 http 协议规定的格式书写
+
+请求格式有三部分组成
+
+- 请求行：高度概括客户端想干什么
+- 请求头：描述了请求的一些额外信息
+- 请求体：包含了要给服务器传递的正文数据（请求体是可以省略的）
+
+#### 请求行
+
+请求行是整个 http 报文的第一行字符串，包含三个部分：请求方法、路径+参数+hash、协议和版本
+
+`GET`（获取资源）、`POST`（提交数据）、`PUT`（修改资源）、`DELETE`（删除资源）
+
+`GET` 和 `DELETE` 请求不能有请求体，`POST` 和 `PUT` 请求可以有请求体
+
+浏览器自动发出的请求基本都是 `GET` 请求，而 `POST` 请求需要开发者手动处理，比如 form 表单中设置 method 为 POST
+
+```http
+GET /index.html HTTP/1.1
+```
+
+#### 请求头
+
+请求头是一系列键值对，里面包含了诸多与业务无关的信息
+
+只需关注下面及格请求头即可：
+
+1. Host：url 地址中的主机
+2. User-Agent：客户端的信息描述
+3. Content-Type：请求体的消息是什么格式，如果没有请求体，这个字段无意义
+   该字段常见的取值为：
+   - `application/x-www-form-urlencoded`：表单默认的提交格式，与 url 请求参数一样
+   - `application/json`：json 格式的数据
+   - `multipart/form-data`：文件上传的格式
+
+#### 响应
+
+响应也是由三部分组成
+
+- 响应行：高度概括服务器想告诉客户端什么
+- 响应头：描述了响应的一些额外信息
+- 响应体：包含服务器返回给客户端的数据
+
+响应行也是由三部分组成
+
+- 协议版本
+- 状态码、状态消息
+
+响应头也是由一系列键值对组成
+
+常见`Content-Type`取值：
+
+1. `text/plain`：普通的纯文本、浏览器会将响应体原封不动地显示到页面上
+2. `text/html`：html 文档，浏览器会将响应体作为页面进行渲染
+3. `text/javascript`或`application/javascript`：js 代码，浏览器通常会使用 JS 执行引擎解析执行
+4. `text/css`：css 代码，浏览器会将其视为样式
+5. `image/jpeg`：jpeg 格式的图片
+6. `attachment`：附件，浏览器看到这个类型会触发下载功能
+7. 其他`MIME`类型
