@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="reset.css" />
+  </head>
+  <body>
+    <button class="btn">按钮</button>
+    <label>价格：999</label>
+    <script>
+      const label = document.querySelector("label");
+      const btn = document.querySelector(".btn");
+      btn.onclick = () => {
+        animation(5000, 999, 29, (val) => {
+          label.textContent = `价格：${val}`;
+          console.log(val);
+        }); 
+      };
+    </script>
+    <script src="animation.js"></script>
+  </body>
+</html>
