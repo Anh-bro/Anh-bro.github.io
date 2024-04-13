@@ -38,6 +38,20 @@ var sidebarConfig: DefaultTheme.Sidebar | undefined = {
       ],
     },
   ],
+  "/note2": [
+    {
+      text: "index页面",
+      link: "/note2/",
+    },
+    {
+      text: "容器Docker的安装",
+      link: "/note2/docker-install",
+    },
+    {
+      text: "使用Docker安装stablediffusion",
+      link: "/note2/sd-docker-install",
+    },
+  ],
   "/note3": [
     {
       base: "/note3/",

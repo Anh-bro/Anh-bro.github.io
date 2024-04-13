@@ -17,4 +17,11 @@ $env:HTTP_PROXY="http://127.0.0.1:10809"
 $env:HTTPS_PROXY="http://127.0.0.1:10809"
 ```
 
-change
+Wget 下载文件
+
+`-O` 指定文件名
+`-P` 指定下载目录
+
+```bash
+wget -O file.txt -P /path/to/file/ https://example.com/file.txt
+```
