@@ -19,6 +19,15 @@ var sidebarConfig: DefaultTheme.Sidebar | undefined = {
       ],
     },
     {
+      text: "Java后端",
+      items: [
+        {
+          text: "集合类与IO",
+          link: "/note1/集合类与IO",
+        },
+      ],
+    },
+    {
       text: "Examples",
       items: [
         { text: "Markdown Examples", link: "/markdown-examples" },
