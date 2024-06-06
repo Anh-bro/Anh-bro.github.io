@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>下雪背景效果和爱心</title>
+    <title>🥵🥵❤️❤️君君❤️❤️🥵🥵</title>
     <style type="text/css">
       body {
         display: flex;
@@ -46,7 +46,8 @@
       .heart {
         width: 200px;
         height: 200px;
-        position: relative;
+        position: absolute;
+        top: 200px;
         animation: heartbeat 1s infinite;
         transform-origin: center center;
       }
@@ -78,8 +79,12 @@
 
       #timeElapsed {
         text-align: center;
-        font-size: 24px;
+        font-size: 36px;
         margin-top: 20px;
+        /* background-color: #000; */
+        /* color: transparent; */
+        text-shadow: 0 0 5px #ff0000, 1px 1px 1px #fff, -1px -1px 1px #fff,
+          0 0 10px #ffff99, 0 0 20px #b9eb50;
       }
 
       @keyframes heartbeat {
@@ -123,7 +128,7 @@
 
     <script>
       function getTimeElapsed() {
-        var startDate = new Date("2022-01-01"); // 设置开始日期，替换为实际的起始日期
+        var startDate = new Date("2002-01-01"); // 设置开始日期，替换为实际的起始日期
         var currentDate = new Date();
         var timeDiff = currentDate - startDate;
 
@@ -159,9 +164,9 @@
         const snowflake = document.createElement("div");
         snowflake.classList.add("snowflake");
         snowflake.style.left = Math.random() * window.innerWidth + "px";
-        snowflake.style.animationDuration = Math.random() * 3 + 2 + "s";
-        snowflake.style.opacity = Math.random();
-        snowflake.style.fontSize = Math.random() * 10 + 10 + "px";
+        snowflake.style.animationDuration = Math.random() * 3 + 6 + "s";
+        snowflake.style.opacity = Math.random() * 0.7;
+        snowflake.style.fontSize = Math.random() * 10 + 20 + "px";
 
         const randomColor = getRandomColor();
         snowflake.style.backgroundColor = randomColor;
